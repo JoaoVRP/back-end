@@ -1,0 +1,81 @@
+package controllers;
+import java.util.ArrayList;
+
+import models.Conta;
+
+public class ContaController {
+
+	static Conta conta;
+	static ArrayList<Conta> contas = new ArrayList<Conta>();
+	public static ArrayList<Conta> listaConta() {
+		
+		return contas;
+	}
+	
+	public static void cadastrar(Conta conta) {
+		
+		contas.add(conta);
+	}
+	
+//	AUTENTICACAO DA CONTA - TELA DE LOGIN
+	public static Boolean autenticarConta(Conta contaLogin) {
+		
+		for (int i = 0; i < contas.size(); i++) {
+			if (contas.get(i).getNumeroConta().equals(contaLogin.getNumeroConta()) ) {
+				
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
+//	RETORNA UM OBJETO CONTA PARA TelaLogin
+	public static Conta buscarConta(String numeroConta) {
+		for (int i = 0; i < contas.size(); i++) {
+			if (contas.get(i).getNumeroConta().equals(numeroConta)) {
+				
+				return contas.get(i);
+			}
+		}
+		
+		return conta;
+	}
+	
+//	CHECA SE A CONTA QUE VAI RECEBER A TRANSFERENCIA EXISTE
+	public static Boolean checarConta(String numeroConta) {
+		
+		for(int i = 0; i < contas.size(); i++) {
+			if (contas.get(i).getNumeroConta().equals(numeroConta) ) {
+				
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
+//	CHECA O SALDO DA CONTA
+	public static Boolean checarSaldo(Conta conta, double valor) {
+		
+		if (conta.getSaldo() >= valor) {
+			
+			return true;
+		}
+		
+		return false;
+	}
+	
+//	SACA O DINHEIRO DA CONTA
+	public static void sacar(Conta conta, double valor) {
+		
+		conta.setSaldo(conta.getSaldo() - valor);
+	}
+
+//	REALIZA O DEPOSITO NA CONTA
+	public static void depositar(Conta conta, double valorDeposito) {
+		
+		conta.setSaldo(conta.getSaldo() + valorDeposito);
+	}
+	
+}
