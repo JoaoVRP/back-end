@@ -17,6 +17,15 @@ public class Principal {
 			System.out.println("\n -- MENU - PRINCIPAL -- \n");
 			System.out.println("(1) Cadastrar Cliente\r\n"
 								+ "(2) Entrar na Conta\r\n"
+<<<<<<< HEAD
+=======
+//								+ "3 Ц Sacar\r\n"
+//								+ "4 Ц Depositar\r\n"
+//								+ "5 Ц Extrato\r\n"
+//								+ "6 Ц Consultar saldo\r\n"
+//								+ "7 Ц Transferir\r\n"
+//								+ "8 Ц Atualizar dados cadastrais\r\n"
+>>>>>>> 6ec5a018feef4954491a5c2a73dcd582a0313545
 								+ "(0) Sair\r\n");
 			System.out.println("Digite a opзгo desejada: ");
 			opcao = sc.nextInt();
