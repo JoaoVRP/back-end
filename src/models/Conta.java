@@ -1,10 +1,13 @@
 package models;
 
+//import java.util.ArrayList;
+
 public class Conta {
 
 	private String numeroConta;
 	private String senha;
 	private Double saldo;
+//	static ArrayList<String> extrato = new ArrayList<String>();
 	
 //	METODO CRIA CONTA
 	public void criarConta(String cpf) {
@@ -27,6 +30,10 @@ public class Conta {
 		public void setSaldo(double saldo) {
 			this.saldo = saldo;
 		}
+		
+//		public void setExtrato(String comprovante) {
+//			this.extrato = comprovante;
+//		}
 	
 	
 //		GETTERS	
@@ -41,4 +48,8 @@ public class Conta {
 		public Double getSaldo() {
 			return saldo;
 		}
+		
+//		public ArrayList<Comprovante> getExtrato(String comprovante) {
+//			return extrato;
+//		}
 }
