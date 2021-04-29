@@ -10,10 +10,15 @@ public class Cliente {
 	private String telefone;
 	private String dataNasc;
 	private Date data;
+	private Conta conta;
 	
 //	GETTERS AND SETTERS
 	
-//		SETTERS
+		//		SETTERS
+		public void setConta(Conta conta) {
+			this.conta = conta;
+		}
+
 		public void setNome(String nome) {
 			this.nome = nome;
 		}
@@ -44,6 +49,10 @@ public class Cliente {
 		
 		
 //		GETTERS
+		public Conta getConta() {
+			return conta;
+		}
+
 		public String getNome() {
 			return nome;
 		}

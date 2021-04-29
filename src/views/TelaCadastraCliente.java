@@ -27,20 +27,6 @@ public class TelaCadastraCliente {
 		
 		System.out.println("Digite o CPF do cliente:");
 		cliente.setCpf(sc.nextLine());
-		conta.criarConta(cliente.getCpf());
-		
-		System.out.println("Digite uma senha para a conta:");
-		conta.setSenha(sc.nextLine());
-		System.out.println("Digite a senha novamente:");
-		  
-		if (SenhaController.verificar(sc.nextLine(), conta.getSenha())) {
-			
-			System.out.println("Senha válida!");
-		} else {
-			
-			System.out.println("As senhas devem ser iguais. Tente novamente!");
-			return 0;
-		}
 		
 		System.out.println("Digite o email do cliente:");
 		cliente.setEmail(sc.nextLine());
@@ -54,15 +40,19 @@ public class TelaCadastraCliente {
 		System.out.println("Digite a data de nascimento do cliente:");
 		cliente.setDataNasc(sc.nextLine());
 		
-		if (ListaClientes.cadastrar(cliente)) {
-			
-			ContaController.cadastrar(conta);
-			System.out.println("Cliente cadastrado com sucesso!");
-		} else {
-			
-			System.out.println("Cliente já cadastrado!");
-		}
+		Conta conta = TelaCadastraConta.renderizar();
 		
+		if(conta != null && ContaController.cadastrar(conta)) {
+			cliente.setConta(conta);
+			if (ListaClientes.cadastrar(cliente)) {
+				System.out.println("Cliente cadastrado com sucesso.");
+			} else {
+				System.out.println("Não foi possível cadastrar esse cliente");
+			}
+		} else {
+			System.out.println("Não foi possível cadastrar esse cliente");
+		}
+				
 		return 1;
 	}
 	
