@@ -41,7 +41,7 @@ public class ListaClientes {
 	static Cliente cliente;
 	public static Cliente buscarConta(String numeroConta) {
 		for (int i = 0; i < clientes.size(); i++) {
-			if (clientes.get(i).getCpf().equals(numeroConta)) {
+			if (clientes.get(i).getConta().getNumeroConta().equals(numeroConta)) {
 				
 				return clientes.get(i);
 			}

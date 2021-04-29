@@ -12,9 +12,28 @@ public class ContaController {
 		return contas;
 	}
 	
-	public static void cadastrar(Conta conta) {
+	public static boolean cadastrar(Conta conta) {
+		if(contas.isEmpty()) {
+			contas.add(conta);
+			return true;
+		}
+				
+		if(ContaController.validar(conta)) {
+			contas.add(conta);
+			return true;			
+		} else {
+			return false;
+		}
+	}
+	
+	public static boolean validar(Conta conta) {
+		for(Conta contaCadastrado : contas){
+			if(contaCadastrado.getNumeroConta().equals(conta.getNumeroConta())) {
+				return false;
+			} 
+		}
 		
-		contas.add(conta);
+		return true;
 	}
 	
 //	AUTENTICACAO DA CONTA - TELA DE LOGIN

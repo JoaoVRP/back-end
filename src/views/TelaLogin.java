@@ -29,7 +29,7 @@ public class TelaLogin {
 //			OPCAO 1 FAZ AUTENTICACAO DA CONTA
 				sc.nextLine();
 				
-				System.out.println("Digite seu CPF:");
+				System.out.println("Digite o número da sua conta:");
 				contaLogin.setNumeroConta(sc.nextLine());
 				
 				System.out.println("Digite sua senha:");

@@ -11,14 +11,14 @@ public class Principal {
 		
 		do {
 			System.out.println(" -------------------- ");
-			System.out.println(" - SISTEMA BANC√ÅRIO - ");
+			System.out.println(" - SISTEMA BANC¡RIO - ");
 			System.out.println(" -------------------- ");
 			
 			System.out.println("\n -- MENU - PRINCIPAL -- \n");
 			System.out.println("(1) Cadastrar Cliente\r\n"
 					   + "(2) Entrar na Conta\r\n"
 					   + "(0) Sair\r\n");
-			System.out.println("Digite a op√ß√£o desejada: ");
+			System.out.println("Digite a opÁ„o desejada: ");
 			opcao = sc.nextInt();
 			sc.nextLine();
 			
@@ -51,7 +51,7 @@ public class Principal {
 				System.out.println("\nEncerrando sistema.");
 				break;
 			default:
-				System.out.println("\nOp√ß√£o inv√°lida!");
+				System.out.println("\nOpÁ„o inv·lida!");
 				break;
 			}			
 		} while (opcao != 0);

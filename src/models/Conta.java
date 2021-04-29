@@ -8,14 +8,7 @@ public class Conta {
 	private String senha;
 	private Double saldo;
 //	static ArrayList<String> extrato = new ArrayList<String>();
-	
-//	METODO CRIA CONTA
-	public void criarConta(String cpf) {
-		this.numeroConta = cpf;
-		this.saldo = 0.0;
-	}
-	
-	
+		
 //	GETTERS AND SETTERS
 	
 //		SETTERS

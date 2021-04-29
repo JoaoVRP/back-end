@@ -27,7 +27,7 @@ public class TelaTransferencia {
 		if (ContaController.checarSaldo(conta, transferencia.getValor())) { 
 //		CHECAR SE SALDO É SUFICIENTE
 			
-			System.out.println("Para qual conta deseja transferir (CPF do dono da conta):");
+			System.out.println("Para qual conta deseja transferir:");
 			conta2.setNumeroConta(sc.nextLine());
 			
 			if (ContaController.checarConta(conta2.getNumeroConta())) {
