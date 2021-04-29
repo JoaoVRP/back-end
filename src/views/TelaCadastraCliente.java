@@ -40,7 +40,7 @@ public class TelaCadastraCliente {
 		System.out.println("Digite a data de nascimento do cliente:");
 		cliente.setDataNasc(sc.nextLine());
 		
-		Conta conta = TelaCadastraConta.renderizar();
+		Conta conta = TelaCadastraConta.renderizar(new Conta());
 		
 		if(conta != null && ContaController.cadastrar(conta)) {
 			cliente.setConta(conta);

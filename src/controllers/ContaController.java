@@ -6,7 +6,8 @@ import models.Conta;
 public class ContaController {
 
 	static Conta conta;
-	static ArrayList<Conta> contas = new ArrayList<Conta>();
+	public static ArrayList<Conta> contas = new ArrayList<Conta>();
+	
 	public static ArrayList<Conta> listaConta() {
 		
 		return contas;
@@ -58,7 +59,7 @@ public class ContaController {
 			}
 		}
 		
-		return conta;
+		return null;
 	}
 	
 //	CHECA SE A CONTA QUE VAI RECEBER A TRANSFERENCIA EXISTE

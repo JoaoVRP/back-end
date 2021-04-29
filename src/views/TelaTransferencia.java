@@ -29,8 +29,8 @@ public class TelaTransferencia {
 			
 			System.out.println("Para qual conta deseja transferir:");
 			conta2.setNumeroConta(sc.nextLine());
-			
-			if (ContaController.checarConta(conta2.getNumeroConta())) {
+						
+			if (ContaController.buscarConta(conta2.getNumeroConta()) != null) {
 //			CHECA SE A CONTA PARA QUAL VAI SER TRANSFERIDA EXISTE
 
 				
@@ -41,10 +41,7 @@ public class TelaTransferencia {
 				short opcao = sc.nextShort();
 				switch (opcao) {
 				case 1: {
-					
-					conta2 = ContaController.buscarConta(conta2.getNumeroConta());
-
-					TransferenciaController.transferir(conta, conta2, transferencia.getValor());
+					TransferenciaController.transferir(conta, ContaController.buscarConta(conta2.getNumeroConta()), transferencia.getValor());
 					System.out.println("Transferência realizada com sucesso!");
 					break;
 				}
