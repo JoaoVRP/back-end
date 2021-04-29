@@ -5,11 +5,9 @@ import controllers.SenhaController;
 import models.Conta;
 
 public class TelaCadastraConta {
-	static Conta conta = new Conta();
-
 	static Scanner sc = new Scanner(System.in);
 	
-	public static Conta renderizar() {
+	public static Conta renderizar(Conta conta) {
 		System.out.println("\n-- CADASTRAR CONTA --\n");
 		System.out.println("Digite o número da conta:");
 		conta.setNumeroConta(sc.nextLine());		

@@ -13,15 +13,25 @@ public class ListaClientes {
 			
 			clientes.add(cliente);
 			return true;
-		} else if (autenticarCpf(cliente)) {
-			
+		} 
+
+		if(validar(cliente)) {
 			clientes.add(cliente);
-			return true;
+			return true;			
 		} else {
-			
 			return false;
 		}
 		
+	}
+	
+	public static boolean validar(Cliente cliente) {
+		for(Cliente clienteCadastrado : clientes){
+			if(clienteCadastrado.getCpf().equals(cliente.getCpf())) {
+				return false;
+			} 
+		}
+		
+		return true;
 	}
 	
 	
